@@ -10,9 +10,6 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Devaraj Reddy, Date : 06-Dec-2020
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

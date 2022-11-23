@@ -15,14 +15,11 @@ import javax.persistence.Table;
 import com.devd.spring.bookstorecommons.util.DateAudit;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
-
-/**
- * @author: Devaraj Reddy, Date : 2019-05-17
- */
 
 @Entity
 @Getter
@@ -33,39 +30,44 @@ import org.hibernate.annotations.GenericGenerator;
 @Builder
 public class User extends DateAudit {
 
-  @ManyToMany(fetch = FetchType.EAGER,
-      cascade = CascadeType.DETACH)
-  @JoinTable(name = "USER_ROLES",
-      joinColumns = {@JoinColumn(name = "user_id")},
-      inverseJoinColumns = {@JoinColumn(name = "role_id")})
-  Set<Role> roles;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-  @Id
-  @GeneratedValue(generator = "uuid")
-  @GenericGenerator(name = "uuid", strategy = "uuid2")
-  @Column(name = "USER_ID", updatable = false, nullable = false)
-  private String userId;
+	@ManyToMany(fetch = FetchType.EAGER,
+			cascade = CascadeType.DETACH)
+	@JoinTable(name = "USER_ROLES",
+	joinColumns = {@JoinColumn(name = "user_id")},
+	inverseJoinColumns = {@JoinColumn(name = "role_id")})
+	Set<Role> roles;
 
-  @Column(name = "USER_NAME", updatable = false, nullable = false)
-  private String userName;
+	@Id
+	@GeneratedValue(generator = "uuid")
+	@GenericGenerator(name = "uuid", strategy = "uuid2")
+	@Column(name = "USER_ID", updatable = false, nullable = false)
+	private String userId;
 
-  @Column(name = "PASSWORD", nullable = false)
-  private String password;
+	@Column(name = "USER_NAME", updatable = false, nullable = false)
+	private String userName;
 
-  @Column(name = "FIRST_NAME", nullable = false)
-  private String firstName;
+	@Column(name = "PASSWORD", nullable = false)
+	private String password;
 
-  @Column(name = "LAST_NAME")
-  private String lastName;
+	@Column(name = "FIRST_NAME", nullable = false)
+	private String firstName;
 
-  @Column(name = "EMAIL", nullable = false)
-  private String email;
+	@Column(name = "LAST_NAME")
+	private String lastName;
 
-  public User(String userName, String password, String firstName, String lastName, String email) {
-    this.userName = userName;
-    this.password = password;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
-  }
+	@Column(name = "EMAIL", nullable = false)
+	private String email;
+
+	public User(String userName, String password, String firstName, String lastName, String email) {
+		this.userName = userName;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
 }

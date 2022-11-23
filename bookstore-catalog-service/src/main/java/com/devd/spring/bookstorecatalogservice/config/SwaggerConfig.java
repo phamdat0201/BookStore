@@ -19,10 +19,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * @author: Devaraj Reddy,
- * Date : 2019-06-06
- */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
@@ -37,7 +33,7 @@ public class SwaggerConfig {
                 "",
                 "v1",
                 "",
-                new Contact("Devaraj Reddy", "https://github.com/devdcores", "devarajreddy.gdr@gmail.com"),
+                new Contact("Pham Dat", "https://github.com/phamdat0201", "phamdat02012001@gmail.com"),
                 "License of API", "API license URL", Collections.emptyList());
     }
     

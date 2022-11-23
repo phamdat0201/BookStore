@@ -12,10 +12,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Optional;
 
-/**
- * @author: Devaraj Reddy,
- * Date : 2019-07-08
- */
 @Service
 public class CartServiceImpl implements CartService {
 

@@ -7,10 +7,6 @@ import com.devd.spring.bookstoreorderservice.web.PreviewOrderResponse;
 
 import java.util.List;
 
-/**
- * @author: Devaraj Reddy,
- * Date : 2019-09-20
- */
 public interface OrderService {
 
     CreateOrderResponse createOrder(CreateOrderRequest createOrderRequest);

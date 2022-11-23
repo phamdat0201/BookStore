@@ -9,9 +9,6 @@ import lombok.NonNull;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-/**
- * @author Devaraj Reddy, Date : 06-Dec-2020
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

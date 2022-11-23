@@ -19,9 +19,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
-/**
- * @author: Devaraj Reddy, Date : 2019-05-17
- */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,31 +28,36 @@ import org.hibernate.annotations.GenericGenerator;
 @Builder
 public class Role extends DateAudit {
 
-  @Id
-  @GeneratedValue(generator = "uuid")
-  @GenericGenerator(name = "uuid", strategy = "uuid2")
-  @Column(name = "ROLE_ID", updatable = false, nullable = false)
-  private String id;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-  @Column(name = "ROLE_NAME", nullable = false)
-  private String roleName;
+	@Id
+	@GeneratedValue(generator = "uuid")
+	@GenericGenerator(name = "uuid", strategy = "uuid2")
+	@Column(name = "ROLE_ID", updatable = false, nullable = false)
+	private String id;
 
-  @ManyToMany(fetch = FetchType.LAZY,
-      cascade = CascadeType.ALL,
-      mappedBy = "roles")
-  @JsonIgnore
-  private Set<User> users = new HashSet<>();
+	@Column(name = "ROLE_NAME", nullable = false)
+	private String roleName;
 
-  @Column(name = "ROLE_DESCRIPTION")
-  private String roleDescription;
+	@ManyToMany(fetch = FetchType.LAZY,
+			cascade = CascadeType.ALL,
+			mappedBy = "roles")
+	@JsonIgnore
+	private Set<User> users = new HashSet<>();
 
-  public void addUser(User user) {
-    this.users.add(user);
-    user.getRoles().add(this);
-  }
+	@Column(name = "ROLE_DESCRIPTION")
+	private String roleDescription;
 
-  public void removeUser(User user) {
-    this.users.remove(user);
-    user.getRoles().remove(this);
-  }
+	public void addUser(User user) {
+		this.users.add(user);
+		user.getRoles().add(this);
+	}
+
+	public void removeUser(User user) {
+		this.users.remove(user);
+		user.getRoles().remove(this);
+	}
 }

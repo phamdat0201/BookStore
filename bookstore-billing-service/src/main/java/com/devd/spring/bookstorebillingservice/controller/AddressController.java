@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * @author: Devaraj Reddy,
- * Date : 2019-06-04
- */
 @RestController
 public class AddressController {
     

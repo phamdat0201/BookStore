@@ -19,9 +19,6 @@ import java.util.Optional;
 import static com.devd.spring.bookstorecommons.util.CommonUtilityMethods.getUserIdFromToken;
 import static com.devd.spring.bookstorecommons.util.CommonUtilityMethods.getUserNameFromToken;
 
-/**
- * @author Devaraj Reddy, Date : 08-Nov-2020
- */
 @Service
 public class ReviewServiceImpl implements ReviewService {
 

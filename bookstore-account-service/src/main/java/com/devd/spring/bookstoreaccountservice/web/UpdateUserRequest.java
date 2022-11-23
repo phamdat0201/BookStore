@@ -7,9 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
-/**
- * @author: Devaraj Reddy, Date : 2019-06-30
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

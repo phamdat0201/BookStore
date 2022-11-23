@@ -9,9 +9,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import javax.transaction.Transactional;
 
-/**
- * @author: Devaraj Reddy, Date : 2019-05-17
- */
 @Transactional
 public interface UserRepository extends CrudRepository<User, Long> {
 

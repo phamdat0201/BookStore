@@ -13,9 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
-/**
- * @author: Devaraj Reddy, Date : 2019-05-18
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,7 +22,12 @@ import org.hibernate.annotations.GenericGenerator;
 @Builder
 public class OAuthClient extends DateAudit {
 
-  @Id
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+@Id
   @GeneratedValue(generator = "uuid")
   @GenericGenerator(name = "uuid", strategy = "uuid2")
   @Column(name = "CLIENT_ID", updatable = false, nullable = false)

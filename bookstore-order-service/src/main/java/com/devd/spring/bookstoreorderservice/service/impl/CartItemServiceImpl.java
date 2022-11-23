@@ -18,10 +18,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-/**
- * @author: Devaraj Reddy,
- * Date : 2019-07-13
- */
 @Service
 public class CartItemServiceImpl implements CartItemService {
 

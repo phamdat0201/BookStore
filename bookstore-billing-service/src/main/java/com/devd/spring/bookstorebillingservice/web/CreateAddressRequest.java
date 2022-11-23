@@ -8,10 +8,6 @@ import lombok.NonNull;
 
 import javax.validation.constraints.Pattern;
 
-/**
- * @author: Devaraj Reddy,
- * Date : 2019-09-20
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

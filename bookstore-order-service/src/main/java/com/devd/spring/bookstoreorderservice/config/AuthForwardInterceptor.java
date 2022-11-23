@@ -10,11 +10,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Objects;
 
-/**
- * @author: Devaraj Reddy,
- * Date : 2019-07-02
- */
-
 /*
 This is required for Feign clients to make request to services.
 It takes the token from header and set the header in the feign request header.

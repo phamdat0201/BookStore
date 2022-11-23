@@ -34,10 +34,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author: Devaraj Reddy,
- * Date : 2019-09-20
- */
 @Service
 public class OrderServiceImpl implements OrderService {
     

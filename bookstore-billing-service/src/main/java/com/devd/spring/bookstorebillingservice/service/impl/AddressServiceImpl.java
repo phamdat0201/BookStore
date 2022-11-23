@@ -16,9 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * @author: Devaraj Reddy, Date : 2019-09-20
- */
 @Service
 public class AddressServiceImpl implements AddressService {
 

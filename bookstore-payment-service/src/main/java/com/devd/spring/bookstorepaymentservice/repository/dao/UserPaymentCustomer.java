@@ -14,9 +14,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * @author Devaraj Reddy, Date : 14-Dec-2020
- */
 @Getter
 @Setter
 @NoArgsConstructor
